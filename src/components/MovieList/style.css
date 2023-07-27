@@ -59,7 +59,7 @@ img{
   }
   
   .category-buttons button.active {
-    background-color: orange; /* Set your active color here */
-    color: white; /* Set the text color for the active button */
+    background-color: orange; 
+    color: white; 
   }
   
