@@ -84,7 +84,7 @@ export const getCategories =async() =>{
               return error.message;
             }
           };
-          // In utilities.js
+        
 export const getMovieCredits = async (movieId) => {
   try {
     const response = await fetch(

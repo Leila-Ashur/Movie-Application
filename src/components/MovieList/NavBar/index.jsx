@@ -14,7 +14,7 @@ const Navbar = () => {
 
   const handleSearch = async () => {
     const results = await searchMovies(searchValue);
-    setSearchResults(results.results); // Update state with search results
+    setSearchResults(results.results); 
   };
 
   return (
@@ -41,7 +41,6 @@ const Navbar = () => {
           <button>Sign in</button>
         </div>
       </nav>
-      {/* Display search results */}
       {searchResults.length > 0 && (
         <div className="search-results">
           {searchResults.map((movie) => (

@@ -11,7 +11,7 @@ const MovieList = ({ searchResults }) => {
   const [movies, setMovies] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [selectedCategoryName, setSelectedCategoryName] = useState("All");
-  const [selectedMovie, setSelectedMovie] = useState(null); // State to store the selected movie for displaying details
+  const [selectedMovie, setSelectedMovie] = useState(null); 
 
   useEffect(() => {
     (async () => {
@@ -26,11 +26,11 @@ const MovieList = ({ searchResults }) => {
   };
 
   const handleMovieClick = (movieId) => {
-    setSelectedMovie(movieId); // Setting the selected movie when a movie is clicked
+    setSelectedMovie(movieId); 
   };
 
   const handleCloseMovieDetails = () => {
-    setSelectedMovie(null); // Resetting the selected movie when closing the details
+    setSelectedMovie(null); 
   };
 
   const filteredMovies =
@@ -54,13 +54,12 @@ const MovieList = ({ searchResults }) => {
           <ImageContainer
             props={item}
             key={item.id}
-            onClick={() => handleMovieClick(item.id)} // Calling handleMovieClick when a movie is clicked
+            onClick={() => handleMovieClick(item.id)} 
           />
         ))}
       </div>
 
       {selectedMovie && (
-        // Showing the MovieDetails component if a movie is selected
         <MovieDetails movieId={selectedMovie} onClose={handleCloseMovieDetails} />
       )}
     </div>

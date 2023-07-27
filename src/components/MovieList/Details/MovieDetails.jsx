@@ -21,7 +21,7 @@ const MovieDetails = () => {
     return <div>Loading...</div>;
   }
 
-  // Check if the required properties exist in the movie object
+ 
   if (!movie.poster_path || !movie.title || !movie.overview || !movie.release_date) {
     return <div>Missing movie details</div>;
   }
